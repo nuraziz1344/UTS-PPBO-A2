@@ -61,7 +61,6 @@ public class TravelAgent {
             filtered.forEach(booking -> System.out
                     .println("Booking ID: " + booking.getId() + ", Destinasi: " + booking.geTrip().getDestinasi()));
         }
-
     }
 
     void getAvailableTripsByType(TripType jenis) {
@@ -87,7 +86,8 @@ public class TravelAgent {
                         + new SimpleDateFormat("d-MMM-yyyy").format(date));
             } else {
                 System.out.println(
-                        "Ditemukan " + filtered.size() + " trip untuk keberangkatan tanggal " + new SimpleDateFormat("d-MMM-yyyy").format(date));
+                        "Ditemukan " + filtered.size() + " trip untuk keberangkatan tanggal "
+                                + new SimpleDateFormat("d-MMM-yyyy").format(date));
                 filtered.forEach(trip -> System.out.printf(
                         "Destinasi : %s -- Keberangkatan : %s -- Harga %d -- Qty : %d -- Jenis : %s\n",
                         trip.getDestinasi(),
@@ -98,7 +98,7 @@ public class TravelAgent {
         }
     }
 
-    String bookExist(Customer customer, Trip trip) {
+    private String bookExist(Customer customer, Trip trip) {
         List<Booking> exist = this.daftarBooking.stream()
                 .filter(book -> book.getCustomer().equals(customer) && book.geTrip().equals(trip))
                 .toList();

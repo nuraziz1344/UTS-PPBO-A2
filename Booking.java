@@ -12,8 +12,8 @@ public class Booking {
     }
 
     static String generateId(Trip trip){
-        Booking.increment += 1;
-        return String.format("00%s00%s%d", trip.getDestinasi(), trip.getJenis().toString(), Booking.increment);
+        increment += 1;
+        return String.format("00%s00%s%d", trip.getDestinasi(), trip.getJenis().toString(), increment);
     }
 
     String getId(){

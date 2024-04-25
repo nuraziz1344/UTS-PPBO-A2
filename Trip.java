@@ -25,6 +25,14 @@ public class Trip {
         return this.qty > 0;
     }
 
+    void bookTrip() {
+        this.qty -= 1;
+    }
+
+    void cancelBook() {
+        this.qty += 1;
+    }
+
     String getDestinasi() {
         return this.destinasi;
     }
@@ -43,13 +51,5 @@ public class Trip {
 
     TripType getJenis() {
         return this.jenisTrip;
-    }
-
-    void bookTrip() {
-        this.qty -= 1;
-    }
-
-    void cancelBook() {
-        this.qty += 1;
     }
 }

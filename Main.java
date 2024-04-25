@@ -47,8 +47,5 @@ public class Main {
         System.out.println("-----------------------------------------------------------------------------------------");
         agent.getAvailableTripsByDate("20-MAY-2024");
         agent.getAvailableTripsByDate("1-MAY-2024");
-
-
-
     }
 }
