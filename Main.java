@@ -36,7 +36,7 @@ public class Main {
         agent.showAvailableTrip();
         System.out.println("-----------------------------------------------------------------------------------------");
 
-        //OPSIONAL METHOD
+        // //OPSIONAL METHOD
         System.out.println("OUTPUT OPSIONAL");
         agent.getBookingsByCustomerEmail(resti.getEmail());
         agent.getBookingsByCustomerEmail(hanif.getEmail());

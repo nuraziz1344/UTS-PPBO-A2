@@ -1,17 +1,22 @@
 public class Booking {
     private static int increment = 0;
-    private int idBooking;
+    private String idBooking;
     private Customer customer;
     private Trip trip;
 
     Booking(Customer customer, Trip trip){
-        Booking.increment += 1;
-        this.idBooking = Booking.increment;
+        this.idBooking = Booking.generateId(trip);
         this.customer = customer;
         this.trip = trip;
+        trip.bookTrip();
     }
 
-    int getId(){
+    static String generateId(Trip trip){
+        Booking.increment += 1;
+        return String.format("00%s00%s%d", trip.getDestinasi(), trip.getJenis().toString(), Booking.increment);
+    }
+
+    String getId(){
         return this.idBooking;
     }
 
